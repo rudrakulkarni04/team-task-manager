@@ -19,7 +19,7 @@ A full-stack collaborative project & task management app with role-based access 
 | Backend | Node.js, Express |
 | Database | PostgreSQL |
 | Auth | JWT + bcrypt |
-| Deployment | Railway |
+| Deployment | Render |
 
 ---
 

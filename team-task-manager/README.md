@@ -51,37 +51,37 @@ npm start
 
 ---
 
-## Deploying to Railway
+## Deploying to Render
 
-### Step 1: Create Railway Account
-Go to [railway.app](https://railway.app) and sign up.
+### Step 1: Create Render Account
+Go tohttps://dashboard.render.com and sign up.
 
 ### Step 2: Deploy Backend
 
 1. Click **New Project → Deploy from GitHub Repo**
 2. Select the `backend` folder (or push backend separately)
-3. Railway auto-detects Node.js
+3. Render auto-detects Node.js
 4. Add environment variables:
-   - `DATABASE_URL` — Railway provides this when you add a PostgreSQL service
+   - `DATABASE_URL` — Render provides this when you add a PostgreSQL service
    - `JWT_SECRET` — any long random string
    - `NODE_ENV` — `production`
-   - `FRONTEND_URL` — your frontend Railway URL (set after frontend deploy)
+   - `FRONTEND_URL` — your frontend Render URL (set after frontend deploy)
 
 ### Step 3: Add PostgreSQL
 
-In your Railway project, click **+ New → Database → PostgreSQL**.  
-Railway auto-injects `DATABASE_URL` to your backend service.
+In your Render project, click **+ New → Database → PostgreSQL**.  
+Render auto-injects `DATABASE_URL` to your backend service.
 
 ### Step 4: Deploy Frontend
 
-1. Add another service in Railway from the `frontend` folder
+1. Add another service in Render from the `frontend` folder
 2. Add environment variable:
-   - `REACT_APP_API_URL` — your backend Railway URL + `/api`
-3. Railway builds and deploys automatically
+   - `REACT_APP_API_URL` — your backend Render URL + `/api`
+3. Render builds and deploys automatically
 
 ### Step 5: Update CORS
 
-Go back to backend service, set `FRONTEND_URL` to your frontend Railway URL.
+Go back to backend service, set `FRONTEND_URL` to your frontend Render URL.
 
 ---
 
